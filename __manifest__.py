@@ -23,7 +23,7 @@
         'security/ir.model.access.csv',
         # 'views/menu.xml',
         # 'security/security.xml',
-        'views/patient_view.xml',
+        'views/college_view.xml',
         'views/doctor_view.xml',
         'views/medical_store.xml',
         # 'views/student_view.xml',
