@@ -26,7 +26,6 @@
                             <field name="partner_id"/>
                             <field name="name"/>
                             <field name="age"/>
-                            <field name="medical_history"/>
                         </group>
                         <group>
                             <field name="contact_no"/>
