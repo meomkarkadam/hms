@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_doctor_tree" model="ir.ui.view">
+            <field name="name">doctor.master.tree</field>
+            <field name="model">doctor.master</field>
+            <field name="arch" type="xml">
+                <list string="Doctor Details">
+                    <field name="partner_id"/>
+                </list>
+            </field>
+        </record>
+        <record id="view_doctor_form" model="ir.ui.view">
+            <field name="name">doctor.master.form</field>
+            <field name="model">doctor.master</field>
+            <field name="arch" type="xml">
+                <form string="Doctor Details">
+                    <sheet>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="specialty"/>
+                            <field name="qualification"/>
+                            <field name="experience"/>
+                        </group>
+                        <group>
+                            <field name="contact_no"/>
+                            <field name="email"/>
+                            <button name="call_on_active"
+                                    string="Trigger Function"
+                                    type="object"
+                                    class="btn-primary"/>
+                        </group>
+                    </sheet>
+                </form>
+
+            </field>
+        </record>
+
+        <record id="action_doctor_view" model="ir.actions.act_window">
+            <field name="name">Doctors</field>
+            <field name="res_model">doctor.master</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <!-- Main parent menu -->
+        <menuitem id="menu_medical_root" name="Hospital College and Research Center Management" sequence="10"/>
+
+        <menuitem id="menu_doctor" name="Hospitals"
+                  parent="menu_medical_root" sequence="1"
+                  action="action_doctor_view"/>
+
+
+
+
+
+
+
+
+
+
+    </data>
+</odoo>

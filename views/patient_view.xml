@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_patient_tree" model="ir.ui.view">
+            <field name="name">patient.master.tree</field>
+            <field name="model">patient.master</field>
+            <field name="arch" type="xml">
+                <list string="Patient Details">
+                    <field name="partner_id"/>
+                    <field name="name"/>
+                    <field name="age"/>
+                    <field name="medical_history"/>
+                    <field name="contact_no"/>
+                    <field name="email"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_patient_form" model="ir.ui.view">
+            <field name="name">patient.master.form</field>
+            <field name="model">patient.master</field>
+            <field name="arch" type="xml">
+                <form string="Doctor Details">
+                    <sheet>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="name"/>
+                            <field name="age"/>
+                            <field name="medical_history"/>
+                        </group>
+                        <group>
+                            <field name="contact_no"/>
+                            <field name="email"/>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_patient_view" model="ir.actions.act_window">
+            <field name="name">Patients</field>
+            <field name="res_model">patient.master</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <record id="action_student_section" model="ir.actions.act_window">
+            <field name="name">Patients</field>
+            <field name="res_model">patient.master</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+         <record id="action_academics" model="ir.actions.act_window">
+            <field name="name">Patients</field>
+            <field name="res_model">patient.master</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+
+
+        <menuitem id="menu_patient" name="College"
+                  parent="menu_medical_root" sequence="2"
+                  action="action_patient_view"/>
+
+        <menuitem id="menu_studen_section" name="Student Section"
+                  parent="menu_patient" sequence="1"
+                  action="action_student_section"/>
+
+        <menuitem id="menu_academics" name="Academics"
+                  parent="menu_patient" sequence="2"
+                  action="action_academics"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </data>
+</odoo>

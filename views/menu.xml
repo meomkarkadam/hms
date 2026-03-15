@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        ########### ACTIONS #########################
+        ####### Action for patient master form  ###############
+        #################################################################
+
+<!--        <record id="action_patient_master" model="ir.actions.act_window">-->
+<!--            <field name="name">Patients</field>-->
+<!--            <field name="res_model">patient.master</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--        </record>-->
+
+<!--        <record id="action_doctor_view" model="ir.actions.act_window">-->
+<!--            <field name="name">Doctors</field>-->
+<!--            <field name="res_model">doctor.master</field>-->
+<!--            <field name="view_mode">tree,form</field>-->
+<!--        </record>-->
+
+        ##################### Action for medical store form
+        ###########################################################################
+        ###########################################################################
+
+<!--        <record id="action_medical_store" model="ir.actions.act_window">-->
+<!--            <field name="name">Medical Store</field>-->
+<!--            <field name="res_model">medical.store</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--        </record>-->
+
+
+        ####################### Action for patient master form #######
+        ####################################################
+        ##############################################################################
+
+<!--         <record id="action_patient_master_appointment" model="ir.actions.act_window">-->
+<!--            <field name="name">Patients Appointment</field>-->
+<!--            <field name="res_model">patient.master</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--        </record>-->
+
+
+
+
+
+###################### Student Management System ###################
+        ############ Action  for student master form ##########
+        ############################################################3
+<!--         <record id="action_student_management" model="ir.actions.act_window">-->
+<!--            <field name="name">Students</field>-->
+<!--            <field name="res_model">student.master</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--         </record>-->
+
+<!--        <record id="action_academics" model="ir.actions.act_window">-->
+<!--            <field name="name">Academics</field>-->
+<!--            <field name="res_model">student.master</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--        </record>-->
+
+<!--        <record id="action_lectures" model="ir.actions.act_window">-->
+<!--            <field name="name">Lectures</field>-->
+<!--            <field name="res_model">student.master</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--        </record>-->
+
+<!--         <record id="action_attendance" model="ir.actions.act_window">-->
+<!--            <field name="name">Attendance</field>-->
+<!--            <field name="res_model">student.master</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--        </record>-->
+
+<!--         <record id="action_reports" model="ir.actions.act_window">-->
+<!--            <field name="name">Reports</field>-->
+<!--            <field name="res_model">student.master</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--        </record>-->
+
+
+
+        ##### Appointment for patient........
+        #############################################################3
+        ##############################################################
+<!--        <record id="action_appointment_patient_details" model="ir.actions.act_window">-->
+<!--            <field name="name">App</field>-->
+<!--            <field name="res_model">doctor.master</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--        </record>-->
+
+<!--        <record id="action_doctor_appointment" model="ir.actions.act_window">-->
+<!--            <field name="name">App</field>-->
+<!--            <field name="res_model">doctor.master</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--        </record>-->
+
+        <!-- Main parent menu -->
+        <menuitem id="menu_medical_root" name="Hospital College and Research Center Management" sequence="10"/>
+
+        <!-- Submenu under the main menu -->
+<!--        <menuitem id="menu_medical_store" name="Stores"-->
+<!--                  parent="menu_medical_root" sequence="1"-->
+<!--                  />-->
+
+        action="action_doctor_view"
+
+<!--        <menuitem id="menu_doctor" name="Doctors"-->
+<!--                  parent="menu_medical_root" sequence="2"-->
+<!--                  action="action_doctor_view"/>-->
+
+
+<!--        <menuitem id="menu_patient" name="Patients"-->
+<!--                  parent="menu_medical_root" sequence="3"-->
+<!--                  action="action_patient_master"/>-->
+
+<!--         <menuitem id="menu_doctor_appointment" name="Doctor Appointment"-->
+<!--                  parent="menu_doctor" sequence="3"-->
+<!--                  action="action_doctor_appointment"/>-->
+<!--                  action="action_doctor_appointment"/>-->
+
+<!--        <menuitem id="menu_student_management" name="Student Management System"-->
+<!--                  parent="menu_medical_root" sequence="4"-->
+<!--                  action="action_student_management"/>-->
+
+<!--        <menuitem id="menu_academics" name="Academics"-->
+<!--                  parent="menu_student_management" sequence="4"-->
+<!--                  action="action_academics"/>-->
+
+<!--        <menuitem id="menu_lectures" name="Lectures"-->
+<!--                  parent="menu_student_management" sequence="4"-->
+<!--                  action="action_lectures"/>-->
+
+<!--        <menuitem id="menu_attendance" name="Attendance"-->
+<!--                  parent="menu_student_management" sequence="4"-->
+<!--                  action="action_attendance"/>-->
+
+<!--        <menuitem id="menu_reports" name="Reports"-->
+<!--                  parent="menu_student_management" sequence="4"-->
+<!--                  action="action_reports"/>-->
+
+
+<!--        <menuitem id="menu_patient_appointment" name="Patients Appointment"-->
+<!--                  parent="menu_patient" sequence="3"-->
+<!--                  action="action_patient_appointment_wizard"/>-->
+
+
+
+
+
+
+
+
+    </data>
+</odoo>
