@@ -56,5 +56,7 @@
                   parent="menu_student_management" sequence="4"
                   action="action_student_academics"/>
 
+
+
     </data>
 </odoo>

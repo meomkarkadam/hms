@@ -17,7 +17,7 @@ class PatientMaster(models.Model):
     contact_no = fields.Char(string='Contact Number')
     email = fields.Char(string='Email')
     address = fields.Text(string='Address')
-    medical_history = fields.Text(string='Medical History')
+    # medical_history = fields.Text(string='Medical History')
     photo = fields.Binary(string='Store Photo', attachment=True)
     # appointment_ids = fields.One2many('hospital.appointment', 'patient_id', string='Appointments')
 

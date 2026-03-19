@@ -9,7 +9,7 @@
                     <field name="partner_id"/>
                     <field name="name"/>
                     <field name="age"/>
-                    <field name="medical_history"/>
+<!--                    <field name="medical_history"/>-->
                     <field name="contact_no"/>
                     <field name="email"/>
                 </list>
@@ -55,6 +55,30 @@
             <field name="view_mode">list,form</field>
         </record>
 
+        <record id="action_student_profile" model="ir.actions.act_window">
+            <field name="name">Students Profile</field>
+            <field name="res_model">student.master</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <record id="action_student_enrollment" model="ir.actions.act_window">
+            <field name="name">Students Enrollment</field>
+            <field name="res_model">student.master</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+         <record id="action_student_parent_portal" model="ir.actions.act_window">
+            <field name="name">Students Parent Portal</field>
+            <field name="res_model">student.master</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+         <record id="action_student_register" model="ir.actions.act_window">
+            <field name="name">Students Register(Academic Year Wise)</field>
+            <field name="res_model">student.master</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
 
 
         <menuitem id="menu_patient" name="College"
@@ -68,6 +92,23 @@
         <menuitem id="menu_academics" name="Academics"
                   parent="menu_patient" sequence="2"
                   action="action_academics"/>
+
+        <menuitem id="menu_student_profile" name="Student Profiles"
+                  parent="menu_studen_section" sequence="1"
+                  action="action_student_profile"/>
+
+        <menuitem id="menu_student_enrollment" name="Student Enrollment"
+                  parent="menu_studen_section" sequence="2"
+                  action="action_student_enrollment"/>
+
+        <menuitem id="menu_student_parent_portal" name="Student Parent Portal"
+                  parent="menu_studen_section" sequence="3"
+                  action="action_student_parent_portal"/>
+
+         <menuitem id="menu_student_register" name="Student Register(Academic Year Wise)"
+                  parent="menu_studen_section" sequence="4"
+                  action="action_student_register"/>
+
 
 
 
