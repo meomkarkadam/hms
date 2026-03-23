@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_admin_tree" model="ir.ui.view">
+            <field name="name">admin.master.tree</field>
+            <field name="model">admin.master</field>
+            <field name="arch" type="xml">
+                <list string="Admin Flow">
+                    <field name="partner_id"/>
+
+                </list>
+            </field>
+        </record>
+
+        <record id="view_admin_form" model="ir.ui.view">
+            <field name="name">admin.master.form</field>
+            <field name="model">admin.master</field>
+            <field name="arch" type="xml">
+                <form string="Admin Details">
+                    <sheet>
+                        <group>
+                            <field name="partner_id"/>
+
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+         <record id="action_admin_management" model="ir.actions.act_window">
+            <field name="name">Admin</field>
+            <field name="res_model">admin.master</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+<!--        <record id="action_faculty_management" model="ir.actions.act_window">-->
+<!--            <field name="name">Faculty</field>-->
+<!--            <field name="res_model">academics.master</field>-->
+<!--            <field name="view_mode">list,form</field>-->
+<!--        </record>-->
+
+
+
+
+
+         <menuitem id="menu_admin_user_rights" name="User Rights"
+                  parent="menu_store" sequence="1"
+                  action="action_admin_management"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </data>
+</odoo>

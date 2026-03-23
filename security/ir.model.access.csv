@@ -1,7 +1,8 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_patient_master,access.patient.master,hms.model_patient_master,base.group_user,1,1,1,1
+access_college_master,access.college.master,hms.model_college_master,base.group_user,1,1,1,1
 access_academics_master,access.academics.master,hms.model_academics_master,base.group_user,1,1,1,1
 access_doctor_master,access.doctor.master,hms.model_doctor_master,base.group_user,1,1,1,1
+access_admin,access.admin,hms.model_admin,base.group_user,1,1,1,1
 access_medical_store,access.medical.store,hms.model_medical_store,base.group_user,1,1,1,1
 access_student_master,access.student.master,hms.model_student_master,base.group_user,1,1,1,1
 access_medical_medicine,access.medical.medicine,hms.model_medical_medicine,base.group_user,1,1,1,1

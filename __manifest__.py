@@ -26,6 +26,7 @@
         'views/college_view.xml',
         'views/doctor_view.xml',
         'views/medical_store.xml',
+        'views/academics.xml',
         # 'views/student_view.xml',
         # 'views/appointment_views.xml',
         # 'data/demo_data.xml',

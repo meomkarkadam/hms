@@ -2,9 +2,9 @@ from odoo import models, fields, api
 
 
 
-class PatientMaster(models.Model):
-    _name = 'patient.master'
-    _description = 'Patient Master'
+class CollegeMaster(models.Model):
+    _name = 'college.master'
+    _description = 'College Master'
 
     partner_id = fields.Many2one('res.partner', string="Related Partner", required=True)
     name = fields.Char(related="partner_id.name", store=True, readonly=False)

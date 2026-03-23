@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_college_tree" model="ir.ui.view">
+            <field name="name">academics.master.tree</field>
+            <field name="model">academics.master</field>
+            <field name="arch" type="xml">
+                <list string="Academics Flow">
+                    <field name="partner_id"/>
+
+                </list>
+            </field>
+        </record>
+
+        <record id="view_college_form" model="ir.ui.view">
+            <field name="name">academics.master.form</field>
+            <field name="model">academics.master</field>
+            <field name="arch" type="xml">
+                <form string="Academics Details">
+                    <sheet>
+                        <group>
+                            <field name="partner_id"/>
+
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+         <record id="action_academics" model="ir.actions.act_window">
+            <field name="name">Academics</field>
+            <field name="res_model">academics.master</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <record id="action_faculty_management" model="ir.actions.act_window">
+            <field name="name">Faculty</field>
+            <field name="res_model">academics.master</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+
+
+         <menuitem id="menu_student_profile" name="Student Profiles"
+                  parent="menu_studen_section" sequence="1"
+                  action="action_student_profile"/>
+
+
+
+        <menuitem id="menu_academics" name="Academics"
+                  parent="menu_patient" sequence="2"
+                  action="action_academics"/>
+
+         <menuitem id="menu_faculty" name="Faculty Report"
+                  parent="menu_academics" sequence="1"
+                  action="action_faculty_management"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </data>
+</odoo>
