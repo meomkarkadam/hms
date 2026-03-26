@@ -74,6 +74,19 @@
             <field name="view_mode">list,form</field>
         </record>
 
+          <record id="action_student_attendance" model="ir.actions.act_window">
+            <field name="name">Students Attendance</field>
+            <field name="res_model">student.master</field>
+            <field name="view_mode">list,form</field>
+          </record>
+
+        <record id="action_bio_student_attendance" model="ir.actions.act_window">
+            <field name="name">Students Bio Attendance</field>
+            <field name="res_model">student.master</field>
+            <field name="view_mode">list,form</field>
+          </record>
+
+
 
 
 
@@ -86,6 +99,8 @@
         <menuitem id="menu_studen_section" name="Student Section"
                   parent="menu_patient" sequence="1"
                   action="action_student_section"/>
+
+
 
 
 
@@ -104,6 +119,16 @@
          <menuitem id="menu_student_register" name="Student Register(Academic Year Wise)"
                   parent="menu_studen_section" sequence="4"
                   action="action_student_register"/>
+
+        <menuitem id="menu_student_attendance" name="Student Attendance Management System"
+                  parent="menu_studen_section" sequence="5"
+                  action="action_student_attendance"/>
+
+         <menuitem id="menu_student_bio_attendance" name="Student Bio Attendance"
+                  parent="menu_student_attendance" sequence="1"
+                  action="action_bio_student_attendance"/>
+
+
 
 
 

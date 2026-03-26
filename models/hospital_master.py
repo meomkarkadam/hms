@@ -1,8 +1,8 @@
 from odoo import models, fields, api
 
 class DoctorMaster(models.Model):
-    _name = 'doctor.master'
-    _description = 'Doctor Master'
+    _name = 'hospital.master'
+    _description = 'Hospital Master'
 
     partner_id = fields.Many2one('res.partner', string="Doctor Name", required=True)
     # name = fields.Char(string='Doctor Name', required=True)

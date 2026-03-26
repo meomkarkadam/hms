@@ -58,6 +58,11 @@
                   action="action_faculty_management"/>
 
 
+        <menuitem id="menu_lecture_management_system" name="Faculty Report"
+                  parent="menu_academics" sequence="1"
+                  action="action_faculty_management"/>
+
+
 
 
 

@@ -52,6 +52,10 @@
                   parent="menu_student_management" sequence="4"
                   action="action_student_attendance"/>
 
+        <menuitem id="menu_student_attendance" name="Attendance"
+                  parent="menu_student_management" sequence="4"
+                  action="action_student_attendance"/>
+
         <menuitem id="menu_student_academics" name="Academics"
                   parent="menu_student_management" sequence="4"
                   action="action_student_academics"/>

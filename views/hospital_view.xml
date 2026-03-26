@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-        <record id="view_doctor_tree" model="ir.ui.view">
-            <field name="name">doctor.master.tree</field>
-            <field name="model">doctor.master</field>
+        <record id="view_hospital_tree" model="ir.ui.view">
+            <field name="name">hospital.master.tree</field>
+            <field name="model">hospital.master</field>
             <field name="arch" type="xml">
-                <list string="Doctor Details">
+                <list string="Hospital Details">
                     <field name="partner_id"/>
                 </list>
             </field>
         </record>
-        <record id="view_doctor_form" model="ir.ui.view">
-            <field name="name">doctor.master.form</field>
-            <field name="model">doctor.master</field>
+        <record id="view_hospital_form" model="ir.ui.view">
+            <field name="name">hospital.master.form</field>
+            <field name="model">hospital.master</field>
             <field name="arch" type="xml">
-                <form string="Doctor Details">
+                <form string="Hospital Details">
                     <sheet>
                         <group>
                             <field name="partner_id"/>
@@ -36,18 +36,39 @@
             </field>
         </record>
 
-        <record id="action_doctor_view" model="ir.actions.act_window">
-            <field name="name">Doctors</field>
-            <field name="res_model">doctor.master</field>
+        <record id="action_hospital_view" model="ir.actions.act_window">
+            <field name="name">hospital</field>
+            <field name="res_model">hospital.master</field>
             <field name="view_mode">list,form</field>
         </record>
+
+         <record id="action_doctor_view" model="ir.actions.act_window">
+            <field name="name">hospital</field>
+            <field name="res_model">hospital.master</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+         <record id="action_patient_view" model="ir.actions.act_window">
+            <field name="name">hospital</field>
+            <field name="res_model">hospital.master</field>
+            <field name="view_mode">list,form</field>
+         </record>
 
         <!-- Main parent menu -->
         <menuitem id="menu_medical_root" name="Hospital College and Research Center Management" sequence="10"/>
 
         <menuitem id="menu_doctor" name="Hospitals"
                   parent="menu_medical_root" sequence="1"
+                  action="action_hospital_view"/>
+
+
+        <menuitem id="menu_doctors" name="Doctors"
+                  parent="menu_doctor" sequence="1"
                   action="action_doctor_view"/>
+
+        <menuitem id="menu_patients" name="Patients"
+                  parent="menu_doctor" sequence="2"
+                  action="action_patient_view"/>
 
 
 
