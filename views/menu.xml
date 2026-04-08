@@ -86,21 +86,43 @@
 <!--            <field name="view_mode">form</field>-->
 <!--        </record>-->
 
-<!--        <record id="action_doctor_appointment" model="ir.actions.act_window">-->
-<!--            <field name="name">App</field>-->
-<!--            <field name="res_model">doctor.master</field>-->
-<!--            <field name="view_mode">form</field>-->
-<!--        </record>-->
+        <record id="action_maintance" model="ir.actions.act_window">
+            <field name="name">Maintence</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <record id="action_employment" model="ir.actions.act_window">
+            <field name="name">Maintence</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <record id="action_helpdesk" model="ir.actions.act_window">
+            <field name="name">Maintence</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">form</field>
+        </record>
+
 
         <!-- Main parent menu -->
-        <menuitem id="menu_medical_root" name="Hospital College and Research Center Management" sequence="10"/>
+<!--        <menuitem id="menu_medical_root" name="Hospital College and Research Center Management" sequence="10"/>-->
 
         <!-- Submenu under the main menu -->
-<!--        <menuitem id="menu_medical_store" name="Stores"-->
-<!--                  parent="menu_medical_root" sequence="1"-->
-<!--                  />-->
+        <menuitem id="menu_maintenance" name="Maintance"
+                  parent="menu_medical_root" sequence="4"
+                  action="action_maintance"
+                  />
+        <menuitem id="menu_employment" name="Employment Management"
+                  parent="menu_medical_root" sequence="5"
+                  action="action_employment"
+                  />
 
-        action="action_doctor_view"
+        <menuitem id="menu_helpdesk" name="Help Desk"
+                  parent="menu_medical_root" sequence="6"
+                  action="action_helpdesk"
+                    />
+
 
 <!--        <menuitem id="menu_doctor" name="Doctors"-->
 <!--                  parent="menu_medical_root" sequence="2"-->

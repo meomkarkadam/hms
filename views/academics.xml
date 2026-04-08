@@ -41,6 +41,24 @@
             <field name="view_mode">list,form</field>
         </record>
 
+         <record id="action_lecture_management" model="ir.actions.act_window">
+            <field name="name">Lecture Management System</field>
+            <field name="res_model">academics.master</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <record id="action_student_attendance_report" model="ir.actions.act_window">
+            <field name="name">Student Attendance Report</field>
+            <field name="res_model">academics.master</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <record id="action_classwise_student_attendance_report" model="ir.actions.act_window">
+            <field name="name">Classwise Student Attendance Report</field>
+            <field name="res_model">academics.master</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
 
 
          <menuitem id="menu_student_profile" name="Student Profiles"
@@ -58,9 +76,17 @@
                   action="action_faculty_management"/>
 
 
-        <menuitem id="menu_lecture_management_system" name="Faculty Report"
-                  parent="menu_academics" sequence="1"
-                  action="action_faculty_management"/>
+        <menuitem id="menu_lecture_management_system" name="Lecture Management System(LMS)"
+                  parent="menu_academics" sequence="2"
+                  action="action_lecture_management"/>
+
+        <menuitem id="menu_student_attendance_report" name="Student Attendance Report"
+                  parent="menu_academics" sequence="3"
+                  action="action_student_attendance_report"/>
+
+         <menuitem id="menu_classwise_student_attendance_report" name="Classwise Student Attendance Report"
+                  parent="menu_student_attendance_report" sequence="1"
+                  action="action_classwise_student_attendance_report"/>
 
 
 

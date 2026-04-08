@@ -4,3 +4,4 @@ from . import medical_store
 from . import student_master
 from . import academics
 from . import admin
+from . import res_partner_inherit

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+<!--        <record id="view_employee_tree" model="ir.ui.view">-->
+<!--            <field name="name">student.master.tree</field>-->
+<!--            <field name="model">student.master</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <list string="Student Details">-->
+<!--                    <field name="partner_id"/>-->
+<!--                </list>-->
+<!--            </field>-->
+<!--        </record>-->
+
+
+        <record id="view_employee_form_inherit" model="ir.ui.view">
+            <field name="name">hr.employee.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+
+            <field name="arch" type="xml">
+                <form string="Employee Details">
+                    <sheet>
+                        <group>
+                            <field name="partner_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_student_management_view" model="ir.actions.act_window">
+            <field name="name">Student Management</field>
+            <field name="res_model">student.master</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <record id="action_student_attendance" model="ir.actions.act_window">
+            <field name="name">Student Management</field>
+            <field name="res_model">student.master</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <record id="action_student_academics" model="ir.actions.act_window">
+            <field name="name">Student Management</field>
+            <field name="res_model">student.master</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <menuitem id="menu_student_management" name="Student Management System"
+                  parent="menu_medical_root" sequence="4"
+                  action="action_student_management_view"/>
+
+        <menuitem id="menu_student_attendance" name="Attendance"
+                  parent="menu_student_management" sequence="4"
+                  action="action_student_attendance"/>
+
+        <menuitem id="menu_student_attendance" name="Attendance"
+                  parent="menu_student_management" sequence="4"
+                  action="action_student_attendance"/>
+
+        <menuitem id="menu_student_academics" name="Academics"
+                  parent="menu_student_management" sequence="4"
+                  action="action_student_academics"/>
+
+
+
+    </data>
+</odoo>

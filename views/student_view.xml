@@ -6,7 +6,19 @@
             <field name="model">student.master</field>
             <field name="arch" type="xml">
                 <list string="Student Details">
-                    <field name="partner_id"/>
+
+                    <field name="partner_id" widget="many2one_avatar" />
+
+                    <field name="mobile" readonly="1"/>
+                    <field name="phone" readonly="1"/>
+                    <field name="email" readonly="1"/>
+                    <field name="street" readonly="1"/>
+                    <field name="city" readonly="1"/>
+                    <field name="state_id" readonly="1"/>
+                    <field name="zip" readonly="1"/>
+                    <field name="country_id" readonly="1"/>
+
+
                 </list>
             </field>
         </record>
@@ -19,18 +31,49 @@
                 <form string="Student Details">
                     <sheet>
                         <group>
-                            <field name="partner_id"/>
+                            <field name="image_1920" widget="image" class="oe_avatar"/>
+
                         </group>
+                        <group>
+                            <field name="partner_id" widget="many2one_avatar" />
+
+                        </group>
+
+                <group string="Contact Info">
+                    <field name="mobile" readonly="1"/>
+                    <field name="phone" readonly="1"/>
+                    <field name="email" readonly="1"/>
+                </group>
+
+                <group string="Address(As Per Aadhar)">
+                    <field name="street" readonly="1"/>
+                    <field name="city" readonly="1"/>
+                    <field name="state_id" readonly="1"/>
+                    <field name="zip" readonly="1"/>
+                    <field name="country_id" readonly="1"/>
+                </group>
+
+                <group string="Parents Details">
+
+                </group>
+
+                <group string="Educational Details">
+
+                </group>
+
+                 <group string="Documents">
+
+                </group>
+
+
+
+
                     </sheet>
                 </form>
             </field>
         </record>
 
-        <record id="action_student_management_view" model="ir.actions.act_window">
-            <field name="name">Student Management</field>
-            <field name="res_model">student.master</field>
-            <field name="view_mode">list,form</field>
-        </record>
+
 
         <record id="action_student_attendance" model="ir.actions.act_window">
             <field name="name">Student Management</field>
@@ -44,21 +87,21 @@
             <field name="view_mode">form</field>
         </record>
 
-        <menuitem id="menu_student_management" name="Student Management System"
-                  parent="menu_medical_root" sequence="4"
-                  action="action_student_management_view"/>
+<!--        <menuitem id="menu_student_management" name="Student Management System"-->
+<!--                  parent="menu_medical_root" sequence="4"-->
+<!--                  action="action_student_management_view"/>-->
 
-        <menuitem id="menu_student_attendance" name="Attendance"
-                  parent="menu_student_management" sequence="4"
-                  action="action_student_attendance"/>
+<!--        <menuitem id="menu_student_attendance" name="Attendance"-->
+<!--                  parent="menu_student_management" sequence="4"-->
+<!--                  action="action_student_attendance"/>-->
 
-        <menuitem id="menu_student_attendance" name="Attendance"
-                  parent="menu_student_management" sequence="4"
-                  action="action_student_attendance"/>
+<!--        <menuitem id="menu_student_attendance" name="Attendance"-->
+<!--                  parent="menu_student_management" sequence="4"-->
+<!--                  action="action_student_attendance"/>-->
 
-        <menuitem id="menu_student_academics" name="Academics"
-                  parent="menu_student_management" sequence="4"
-                  action="action_student_academics"/>
+<!--        <menuitem id="menu_student_academics" name="Academics"-->
+<!--                  parent="menu_student_management" sequence="4"-->
+<!--                  action="action_student_academics"/>-->
 
 
 
