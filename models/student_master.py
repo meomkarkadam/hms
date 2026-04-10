@@ -80,12 +80,23 @@ class StudentEnrollment(models.Model):
         default=lambda self: self.get_academic_year()
 
     )
+
+    course = fields.Selection([
+        ('mbbs cbme', 'MBBS-CBME'),
+        ('mbbs old', 'MBBS-OLD'),
+    ],
+    string="Course",
+    default='mbbs cbme',)
+
     ace_class = fields.Selection(
-        'first professional MBBS', 'First Professional MBBS',
-        'second profess MBBS', 'Second Professional MBBS',
-        'third professional MBBS part I', 'Third Professional MBBS Part I',
-        'third professional MBBS part II', 'Third Professional MBBS Part II',
-        string="Academic Class",
+        [
+            ('first professional MBBS', 'First Professional MBBS'),
+            ('second profess MBBS', 'Second Professional MBBS'),
+            ('third professional MBBS part I', 'Third Professional MBBS Part I'),
+            ('third professional MBBS part II', 'Third Professional MBBS Part II'),
+        ],
+
+        string="Academic Class"
     )
 
 
@@ -116,6 +127,10 @@ class StudentEnrollment(models.Model):
     @api.onchange('ref_id')
     def _onchange_field_a(self):
         self.erp_id = self.ref_id
+
+    def action_test_button(self):
+        for rec in self:
+            print("Button Clicked", rec.name)
 
 
 

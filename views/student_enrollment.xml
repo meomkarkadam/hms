@@ -31,13 +31,18 @@
                         </group>
 
                         <group string="Academics Details">
-                            <field name="academic_year"/>
-                            <field name="academic_year"/>
+                            <field name="ace_class"/>
+                            <field name="course"/>
 
 
 
 
                         </group>
+
+                        <button name="action_test_button"
+                                type="object"
+                                string="Enroll"
+                                class="btn-primary"/>
 
 
                     </sheet>
