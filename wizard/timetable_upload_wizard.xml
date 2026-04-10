@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- Wizard form view definition -->
+        <record id="view_tiemtable_upload_wizard_form" model="ir.ui.view">
+            <field name="name">patient.appointment.wizard.form</field>
+            <field name="model">appointment.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Upload in to Time-Table">
+                    <group>
+                        <field name="name"/>
+
+                    </group>
+                    <footer>
+                        <button string="Confirm" type="object" name="action_confirm_appointment" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Window action to open the wizard -->
+        <record id="action_patient_appointment_wizard" model="ir.actions.act_window">
+            <field name="name">Patient Appointment Wizard</field>
+            <field name="res_model">appointment.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_patient_appointment_wizard_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <!-- Menu item to trigger the wizard -->
+        <menuitem id="menu_patient_appointment"
+                  name="Patients Appointment"
+                  parent="menu_patient"
+                  sequence="3"
+                  action="action_patient_appointment_wizard"/>
+
+
+
+    </data>
+</odoo>

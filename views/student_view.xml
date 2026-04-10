@@ -8,7 +8,6 @@
                 <list string="Student Details">
 
                     <field name="partner_id" widget="many2one_avatar" />
-
                     <field name="mobile" readonly="1"/>
                     <field name="phone" readonly="1"/>
                     <field name="email" readonly="1"/>
@@ -31,7 +30,9 @@
                 <form string="Student Details">
                     <sheet>
                         <group>
-                            <field name="image_1920" widget="image" class="oe_avatar"/>
+                            <div class="text-start" >
+                            <field name="image_1920" widget="image" class="oe_avatar"  align="center" options="{'size': [200, 200]}"/>
+                            </div>
 
                         </group>
                         <group>
@@ -54,6 +55,10 @@
                 </group>
 
                 <group string="Parents Details">
+                     <field name="fathername" readonly="1">
+                        </field>
+                     <field name="designation">
+                        </field>
 
                 </group>
 

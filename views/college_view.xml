@@ -5,7 +5,7 @@
             <field name="name">college.master.tree</field>
             <field name="model">college.master</field>
             <field name="arch" type="xml">
-                <list string="Patient Details">
+                <list string="College">
                     <field name="partner_id"/>
                     <field name="name"/>
                     <field name="age"/>

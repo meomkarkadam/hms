@@ -45,3 +45,16 @@ class Appointment(models.Model):
     _description = 'Appointment'
 
     doctor_id = fields.Many2one('doctor.master',String="Doctor")
+
+
+
+class PatientMaster(models.Model):
+    _name = 'patient.master'
+    _description = 'Patient Master'
+
+    doctor_id = fields.Many2one('res.partner', string="Doctor Name", required=True)
+    patient_id = fields.Many2one('res.partner', string="Patient Name", required=True)
+    # name = fields.Char(string='Doctor Name', required=True)
+
+    appointment_ids = fields.One2many('hospital.appointment', 'doctor_id', string='Appointments')
+

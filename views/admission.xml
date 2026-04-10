@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_admission_master_tree" model="ir.ui.view">
+            <field name="name">admission.master.tree</field>
+            <field name="model">admission.master</field>
+            <field name="arch" type="xml">
+                <list>
+                        <field name="academic_year"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_admission_master" model="ir.ui.view">
+            <field name="name">admission.master.form</field>
+            <field name="model">admission.master</field>
+            <field name="arch" type="xml">
+                <form string="Admission Details">
+                    <sheet>
+                        <group>
+                            <field name="academic_year"/>
+
+                        </group>
+
+                    </sheet>
+                </form>
+
+            </field>
+        </record>
+
+
+
+         <record id="action_admission_view" model="ir.actions.act_window">
+            <field name="name">Admission</field>
+            <field name="res_model">admission.master</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+
+
+
+
+
+
+
+
+
+
+    </data>
+</odoo>
+
+

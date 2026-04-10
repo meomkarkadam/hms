@@ -7,6 +7,7 @@ class ResPartner(models.Model):
     _description = 'Res Partner'
 
     partner_id = fields.Many2one('res.partner', "Name")
-    erp_id = fields.Char(string="Student ID")
+    # erp_id = fields.Many2one('student.enrollment', string="Student ID")
+
 
 

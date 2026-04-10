@@ -93,7 +93,7 @@
         </record>
 
         <record id="action_employment" model="ir.actions.act_window">
-            <field name="name">Maintence</field>
+            <field name="name">Employment</field>
             <field name="res_model">hr.employee</field>
             <field name="view_mode">form</field>
         </record>
@@ -105,23 +105,26 @@
         </record>
 
 
-        <!-- Main parent menu -->
-<!--        <menuitem id="menu_medical_root" name="Hospital College and Research Center Management" sequence="10"/>-->
+<!--         Main parent menu -->
+        <menuitem id="menu_medical_root" name="Hospital College and Research Center Management" sequence="10"/>
 
         <!-- Submenu under the main menu -->
-        <menuitem id="menu_maintenance" name="Maintance"
-                  parent="menu_medical_root" sequence="4"
-                  action="action_maintance"
-                  />
-        <menuitem id="menu_employment" name="Employment Management"
-                  parent="menu_medical_root" sequence="5"
-                  action="action_employment"
-                  />
+            <menuitem id="menu_maintenance" name="Maintance"
+                      parent="menu_medical_root" sequence="4"
+                      action="action_maintance"
+                      />
 
-        <menuitem id="menu_helpdesk" name="Help Desk"
+
+
+            <menuitem id="menu_helpdesk" name="Help Desk"
+                      parent="menu_medical_root" sequence="5"
+                      action="action_helpdesk"
+                        />
+
+        <menuitem id="menu_employment" name="Employment Management"
                   parent="menu_medical_root" sequence="6"
-                  action="action_helpdesk"
-                    />
+                  action="action_employment"
+        />
 
 
 <!--        <menuitem id="menu_doctor" name="Doctors"-->

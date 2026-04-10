@@ -20,9 +20,9 @@
             <field name="arch" type="xml">
                 <form string="Employee Details">
                     <sheet>
-                        <group>
-                            <field name="partner_id"/>
-                        </group>
+<!--                        <group>-->
+<!--                            <field name="partner_id"/>-->
+<!--                        </group>-->
                     </sheet>
                 </form>
             </field>

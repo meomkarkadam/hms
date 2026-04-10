@@ -17,7 +17,7 @@
     'company': 'Evozard Consulting Service PVT LTD',
     'maintainer': 'Online Service',
     'website': 'https://www.yourcompanywebsite.com',
-    'depends': ['contacts','hr','maintenance'],
+    'depends': ['contacts','hr','maintenance','crm'],
 
     'data': [
         'security/ir.model.access.csv',
@@ -31,7 +31,9 @@
         'views/student_view.xml',
         'views/student_enrollment.xml',
         'views/res_partner_inherit_view.xml',
-        # 'data/demo_data.xml',
+        'views/patient.xml',
+        'views/admission.xml',
+         # 'data/demo_data.xml',
         # 'report/patient_report.xml',
         # 'wizard/doctor2patient_appointment_wizard.xml',
     ],
