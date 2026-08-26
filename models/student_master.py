@@ -117,8 +117,7 @@ class StudentEnrollment(models.Model):
 
     admission_date = fields.Datetime("Admission Date")
 
-<<<<<<< HEAD
-    )
+
 
     course = fields.Selection([
         ('mbbs cbme', 'MBBS-CBME'),
@@ -127,18 +126,14 @@ class StudentEnrollment(models.Model):
     string="Course",
     default='mbbs cbme',)
 
-=======
->>>>>>> 6fc364a (menus changes)
+
     ace_class = fields.Selection(
         [
             ('first professional MBBS', 'First Professional MBBS'),
             ('second profess MBBS', 'Second Professional MBBS'),
             ('third professional MBBS part I', 'Third Professional MBBS Part I'),
             ('third professional MBBS part II', 'Third Professional MBBS Part II'),
-<<<<<<< HEAD
-=======
             ('Internship', 'Internship'),
->>>>>>> 6fc364a (menus changes)
         ],
 
         string="Academic Class"

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="hms.TimePickerField">
+        <input
+            type="time"
+            class="form-control"
+            t-att-value="state.value"
+            t-on-change="onChange"
+        />
+    </t>
+
+</templates>

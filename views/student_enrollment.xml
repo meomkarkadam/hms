@@ -38,17 +38,14 @@
                         <group string="Academics Details">
                             <field name="ace_class"/>
                             <field name="course"/>
-<<<<<<< HEAD
-=======
+
                             <field name="admission_date"/>
->>>>>>> 6fc364a (menus changes)
 
 
 
 
                         </group>
 
-<<<<<<< HEAD
                         <button name="action_test_button"
                                 type="object"
                                 string="Enroll"

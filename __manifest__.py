@@ -41,6 +41,12 @@
     'demo': [
         # 'data/demo_data.xml',
     ],
+    'assets': {
+        'web.assets_backend': [
+            'hms/static/src/js/time_picker_field.js',
+            'hms/static/src/xml/time_picker_field.xml',
+        ],
+    },
     # 'images': ['static/description/icon.png'],
     'license': 'LGPL-3',
     'installable': True,

@@ -5,7 +5,7 @@ import { registry } from "@web/core/registry";
 import { standardFieldProps } from "@web/views/fields/standard_field_props";
 
 export class TimePickerField extends Component {
-    static template = "your_module.TimePickerField";
+    static template = "hms.TimePickerField";
     static props = {
         ...standardFieldProps,
     };
