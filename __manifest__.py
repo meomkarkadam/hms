@@ -36,6 +36,7 @@
          # 'data/demo_data.xml',
         # 'report/patient_report.xml',
         # 'wizard/doctor2patient_appointment_wizard.xml',
+        'wizard/timetable_upload_wizard.xml',
     ],
     'demo': [
         # 'data/demo_data.xml',

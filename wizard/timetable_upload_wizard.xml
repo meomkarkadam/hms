@@ -4,37 +4,37 @@
 
         <!-- Wizard form view definition -->
         <record id="view_tiemtable_upload_wizard_form" model="ir.ui.view">
-            <field name="name">patient.appointment.wizard.form</field>
-            <field name="model">appointment.wizard</field>
+            <field name="name">timetable.import.wizard</field>
+            <field name="model">timetable.import.wizard</field>
             <field name="arch" type="xml">
                 <form string="Upload in to Time-Table">
                     <group>
-                        <field name="name"/>
+                        <field name="excel_file"/>
 
                     </group>
                     <footer>
-                        <button string="Confirm" type="object" name="action_confirm_appointment" class="btn-primary"/>
+<!--                        <button string="Confirm" type="object" name="action_confirm_appointment" class="btn-primary"/>-->
                         <button string="Cancel" class="btn-secondary" special="cancel"/>
                     </footer>
                 </form>
             </field>
         </record>
-
+4455
         <!-- Window action to open the wizard -->
-        <record id="action_patient_appointment_wizard" model="ir.actions.act_window">
-            <field name="name">Patient Appointment Wizard</field>
-            <field name="res_model">appointment.wizard</field>
+        <record id="action_timetable_import_wizard" model="ir.actions.act_window">
+            <field name="name">Time Table Import Wizard</field>
+            <field name="res_model">timetable.import.wizard</field>
             <field name="view_mode">form</field>
-            <field name="view_id" ref="view_patient_appointment_wizard_form"/>
+            <field name="view_id" ref="view_tiemtable_upload_wizard_form"/>
             <field name="target">new</field>
         </record>
 
         <!-- Menu item to trigger the wizard -->
-        <menuitem id="menu_patient_appointment"
-                  name="Patients Appointment"
-                  parent="menu_patient"
-                  sequence="3"
-                  action="action_patient_appointment_wizard"/>
+<!--        <menuitem id="menu_patient_appointment"-->
+<!--                  name="Patients Appointment"-->
+<!--                  parent="menu_patient"-->
+<!--                  sequence="3"-->
+<!--                  action="action_patient_appointment_wizard"/>-->
 
 
 

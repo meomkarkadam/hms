@@ -7,9 +7,7 @@
             <field name="arch" type="xml">
                 <list string="Academics Flow">
                     <field name="academic_year"/>
-
                     <field name="course"/>
-
                 </list>
             </field>
         </record>
@@ -22,20 +20,31 @@
                     <sheet>
                         <group>
                             <field name="academic_year"/>
-
                         </group>
                         <group>
                             <field name="course"/>
-
                         </group>
-                        <footer>
-                            <button string="Confirm"
+                        <header>
+                            <button name="action_open_wizard"
                                     type="object"
-                                    name="action_confirm"/>
-
+                                    string="Open Wizard"
+                                    class="btn-primary"/>
                             <button string="Cancel"
                                     special="cancel"/>
-                        </footer>
+                        </header>
+
+                        <notebook>
+                            <page string="Subjects">
+
+                                <field name="line_ids">
+                                    <list editable="bottom">
+                                        <field name="day"/>
+                                    </list>
+
+                                </field>
+
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>

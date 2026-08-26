@@ -1,6 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_college_master,access.college.master,hms.model_college_master,base.group_user,1,1,1,1
 access_academics_master,access.academics.master,hms.model_academics_master,base.group_user,1,1,1,1
+access_academics_line,access.academics.line,hms.model_academics_line,base.group_user,1,1,1,1
 access_hospital_master,access.hospital.master,hms.model_hospital_master,base.group_user,1,1,1,1
 access_patient_master,access.patient.master,hms.model_patient_master,base.group_user,1,1,1,1
 access_admin_master,access.admin.master,hms.model_admin_master,base.group_user,1,1,1,1
@@ -10,4 +11,5 @@ access_student_master,access.student.master,hms.model_student_master,base.group_
 access_student_enrollment,access.student.enrollment,hms.model_student_enrollment,base.group_user,1,1,1,1
 access_medical_medicine,access.medical.medicine,hms.model_medical_medicine,base.group_user,1,1,1,1
 access_appointment_wizard,access.appointment.wizard,hms.model_appointment_wizard,base.group_user,1,1,1,1
+access_timetable_import_wizard,access.timetable.import.wizard,hms.model_timetable_import_wizard,base.group_user,1,1,1,1
 
